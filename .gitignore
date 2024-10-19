@@ -1,0 +1,14 @@
+# System files
+.DS_Store
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+
+# BibTeX files
+*.bbl
+*.blg

@@ -1,0 +1,157 @@
+\documentclass[12pt,a4paper]{article}
+
+% Seitenränder einstellen: links 3cm, rechts 2,6cm, oben und unten 2,6cm
+\usepackage[margin=2.6cm,left=3cm]{geometry}
+
+% Zeilenabstand auf 1,5-fach setzen
+\usepackage{setspace}
+\onehalfspacing
+
+% Deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+
+% Umlaute verwenden
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Schriftart einstellen, z.B. Times New Roman
+\usepackage{times}
+
+% Überschriften formatieren
+\usepackage{sectsty}
+\sectionfont{\fontsize{16}{19}\selectfont\bfseries}
+\subsectionfont{\fontsize{14}{17}\selectfont\bfseries}
+\subsubsectionfont{\fontsize{12}{15}\selectfont\bfseries}
+\paragraphfont{\fontsize{12}{15}\selectfont\bfseries\itshape}
+
+% biblatex mit Harvard-Stil laden
+\usepackage[style=authoryear-comp]{biblatex}
+\addbibresource{literature.bib}
+
+% Abbildungen und Tabellen beschriften
+\usepackage{caption}
+\captionsetup{font=small}
+
+% Paket für erweiterte Tabellenfunktionen
+\usepackage{booktabs}
+
+% Paket für Grafiken
+\usepackage{graphicx}
+
+% Paket für URL-Darstellung
+\usepackage{url}
+
+% Paket für Anführungszeichen
+\usepackage[autostyle=true]{csquotes}
+
+% Absätze nicht einrücken, dafür Abstand zwischen Absätzen
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% Kopf- und Fußzeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{Titel der Arbeit}
+\fancyhead[R]{\thepage}
+
+% Begin des Dokuments
+\begin{document}
+
+% Deckblatt
+\begin{titlepage}
+    \centering
+    {\Large\bfseries Titel der wissenschaftlichen Arbeit\par}
+    \vspace{2cm}
+    {\large Autor: Ihr Name\par}
+    {\large Matrikelnummer: Ihre Matrikelnummer\par}
+    {\large Studiengang: Ihr Studiengang\par}
+    \vfill
+    {\large Datum: \today\par}
+\end{titlepage}
+
+% Inhaltsverzeichnis
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+% Einleitung
+\section{Einleitung}
+
+Hier beginnt Ihre Einleitung.
+
+% Hauptkapitel 1
+\section{Zitieren in wissenschaftlichen Texten}
+
+Bei jedem wissenschaftlichen Text muss deutlich gemacht werden, wenn fremdes Gedankengut übernommen wird \parencite[vgl.][S. 15]{Mustermann2005}.
+
+\subsection{Wörtliches, direktes Zitat}
+
+Ein wörtliches Zitat ist die Wiedergabe von Text im originalen Wortlaut. Dabei sind einige grundlegende Aspekte zu beachten \parencite[vgl.][S. 102]{Schmidt2004}.
+
+\subsubsection{Zitat mit abschließender Quellenangabe}
+
+Die Rolle des Mephisto lässt sich wie folgt beschreiben: „Der Mensch liebt die Ruhe und aus diesem Grund braucht er einen in etwa gleich starken Gegner, der ihm im Leben fortwährend schwierige Bälle zuschlägt. Das ist die Aufgabe des Mephisto“ \parencite[][S. 102]{Schmidt2004}.
+
+\subsubsection{Zitat mit Satzzeichen innerhalb des Zitats}
+
+Der Autor verleiht seiner Auffassung folgendermaßen Ausdruck: „Das ist die Aufgabe des Mephisto. Aus diesem Grund muss es ihn geben!“ \parencite[][S. 102]{Schmidt2004}.
+
+\subsubsection{Autor im Fließtext erwähnt}
+
+Michael Schmidt (\citeyear[102]{Schmidt2004}) folgend, braucht der Mensch „einen in etwa gleich starken Gegner, der ihm im Leben fortwährend schwierige Bälle zuschlägt“.
+
+\subsubsection{Längeres Zitat (Blockzitat)}
+
+Erstreckt sich das wörtliche Zitat über drei Zeilen oder mehr, wird es eingerückt dargestellt:
+
+\begin{quote}
+„Wann immer es galt, in der Schule einen Vortrag oder einen Aufsatz über Lyrik anzufertigen, griff ich sofort zu Heinrich Heine. Über ihn war gar nicht genug zu sagen. Nur eine Gelegenheit hätte ich gerne ausgelassen. In der 11. Klasse mussten wir einen Brief an ihn schreiben. [...]. Ich fand, dass er völlig Recht hatte.“ \parencite[][S. 120]{Rusch2003}
+\end{quote}
+
+\subsubsection{Auslassungen im Zitat}
+
+„Wichtig ist das Verwenden mehrerer Stifte [...], um einen Text zu schreiben“ \parencite[][S. 45]{Mueller2019}.
+
+\subsubsection{Rechtschreibfehler im Original}
+
+„Wichtig ist das Verwenden mehrerer Stiffte [sic], um einen Text zu schreiben“ \parencite[][S. 45]{Mueller2019}.
+
+\subsubsection{Fremdsprachliche Zitate}
+
+Im folgenden Abschnitt beschreibt Melville (\citeyear[201]{Melville1994}) die Unverwechselbarkeit Moby Dicks: „\textit{The peculiar snow-white brow of Moby Dick, and his snow-white hump, could not but be unmistakable.}“
+
+\subsection{Sinngemäße Zitate / Paraphrasen}
+
+Damit in einem Staat öffentliche Güter bereitgestellt werden können, muss die finanzielle Beteiligung der einzelnen Individuen geregelt werden. Als Maßstab für die individuelle Beteiligung kann hierbei das Einkommen dienen, da es einen Hinweis auf die Inanspruchnahme der öffentlichen Leistungen liefert. Diese sogenannte Indikatortheorie kann somit als Rechtfertigung für die Erhebung einer Einkommenssteuer angesehen werden \parencite[vgl.][S. 269]{Mustermann2006}.
+
+\subsection{Zitate aus Sammelwerken}
+
+Wird zum Beispiel aus dem Beitrag von Max Frisch im Sammelwerk \textit{Jugend fragt - Prominente antworten} von Rudolf Ossowski zitiert, so lautet die Literaturangabe im Text: \parencite{Frisch1975}.
+
+\subsection{Zitate aus Internetquellen}
+
+„Während die Geburtenzahl insgesamt in Deutschland zurückgeht, steigt die Anzahl der Kinder, deren Eltern nicht miteinander verheiratet sind“ \parencite{StatistischesBundesamt2006}.
+
+\subsection{Zitate aus Filmen}
+
+Der Film \textit{Einer flog über das Kuckucksnest} thematisiert die Einweisung eines gesunden Menschen in eine geschlossene Anstalt. McMurphy protestiert gegen die Verabreichung seiner Medikamente: „Mir gefällt der Gedanke nicht, etwas einnehmen zu müssen, von dem ich nicht weiß, was es ist“ \parencite[28'15'']{Forman2002}.
+
+\subsection{Zitate aus zweiter Hand (Sekundärzitate)}
+
+„Der unerhörte Vorteil der grundsätzlichen Anerkennung der Demokratie ist, dass mir eigentlich eine überstarke Demokratie lieber ist als gar keine“ \parencite[][zitiert nach][S. 113]{Blankart2006}.
+
+\subsection{Gesetzestexte}
+
+Die Haftung ist im Bürgerlichen Gesetzbuch (BGB) geregelt. So muss laut BGB die Person Schadenersatz leisten, die fahrlässig oder vorsätzlich eine andere Person verletzt (§ 823 Abs. 1 Satz 1 BGB).
+
+% Literaturverzeichnis
+\newpage
+\begingroup
+\setstretch{1} % Line spacing within entries
+\setlength{\bibitemsep}{1\baselineskip} % Space between entries
+\printbibliography[title=Literaturverzeichnis]
+\endgroup
+
+\end{document}
