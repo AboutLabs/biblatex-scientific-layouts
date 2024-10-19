@@ -8,6 +8,8 @@
 *.pdf
 *.synctex.gz
 *.toc
+*.bcf
+*.xml
 
 # BibTeX files
 *.bbl
