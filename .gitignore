@@ -9,6 +9,8 @@
 *.synctex.gz
 *.toc
 *.bcf
+*.fdb_latexmk
+*.fls
 *.xml
 
 # BibTeX files
