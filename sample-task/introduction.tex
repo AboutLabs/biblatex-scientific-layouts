@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+
+% Seitenränder einstellen: links 3cm, rechts 2,6cm, oben und unten 2,6cm
+\usepackage[margin=2.6cm,left=3cm]{geometry}
+
+% Zeilenabstand auf 1,5-fach setzen
+\usepackage{setspace}
+\onehalfspacing
+
+% Deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+
+% Umlaute verwenden
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Schriftart einstellen, z.B. Times New Roman
+\usepackage{times}
+
+% Überschriften formatieren
+\usepackage{sectsty}
+\sectionfont{\fontsize{16}{19}\selectfont\bfseries}
+\subsectionfont{\fontsize{14}{17}\selectfont\bfseries}
+\subsubsectionfont{\fontsize{12}{15}\selectfont\bfseries}
+\paragraphfont{\fontsize{12}{15}\selectfont\bfseries\itshape}
+
+% biblatex mit Harvard-Stil laden und URLs erlauben
+\usepackage[style=authoryear-comp,url=true]{biblatex}
+\addbibresource{literature.bib}
+
+% Abbildungen und Tabellen beschriften
+\usepackage{caption}
+\captionsetup{font=small}
+
+% Paket für erweiterte Tabellenfunktionen
+\usepackage{booktabs}
+
+% Paket für Grafiken
+\usepackage{graphicx}
+
+% Paket für Anführungszeichen
+\usepackage[autostyle=true]{csquotes}
+
+% Absätze nicht einrücken, dafür Abstand zwischen Absätzen
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% Kopf- und Fußzeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{Cybersicherheit 2024: Herausforderungen und Schutzmaßnahmen im digitalen Zeitalter}
+\fancyhead[R]{\thepage}
+
+% Begin des Dokuments
+\begin{document}
+
+% Deckblatt
+\begin{titlepage}
+    \centering
+    {\Large\bfseries Cybersicherheit 2024: Herausforderungen und Schutzmaßnahmen im digitalen Zeitalter\par}
+    \vspace{2cm}
+    {\large Autor: Simon Aumayer\par}
+    {\large Matrikelnummer: 0354832\par}
+    {\large Studiengang: Informatik, B.Sc.\par}
+    \vfill
+    {\large Datum: \today\par}
+\end{titlepage}
+
+% Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+% Einleitung
+\section{Einleitung}
+
+In der zunehmend digitalisierten Geschäftswelt des Jahres 2024 sehen sich Unternehmen einer sich ständig weiterentwickelnden Landschaft von Cyberbedrohungen gegenüber. Die Komplexität und Häufigkeit von Cyberangriffen nehmen stetig zu, was Organisationen vor große Herausforderungen beim Schutz ihrer digitalen Assets, Daten und Reputation stellt \parencite{Lallie2021}. Laut einer aktuellen Studie beobachten 82\% der IT-Verantwortlichen in Deutschland seit 2023 eine Zunahme der Bedrohungen, wobei insbesondere die fortschreitende Digitalisierung und verstärkte Cloud-Nutzung die Angriffsfläche vergrößern \parencite{KPMG2023}.
+
+Zu den aktuell größten Bedrohungen zählen Ransomware-Attacken, die weiterhin eine der größten Cyber-Bedrohungen darstellen. Obwohl das Bayerische Landeskriminalamt (BLKA) rückläufige Zahlen verzeichnete, bleibt das Gefahrenpotenzial sehr hoch. Besonders besorgniserregend sind Angriffsmethoden wie Leakware, bei denen mit der Veröffentlichung gestohlener Daten gedroht wird, und Wiper-Ransomware, die Daten dauerhaft beschädigt oder löscht. Betroffen sind gleichermaßen Unternehmen, kritische Infrastrukturen, Forschungseinrichtungen sowie die öffentliche Verwaltung \parencite{CybersicherheitBayern2024}. Daneben stellen Business Email Compromise (BEC), Distributed Denial of Service (DDoS) Angriffe sowie durch künstliche Intelligenz (KI) unterstützte Phishing-Kampagnen wachsende Risiken dar \parencite{Brundage2018}. Die zunehmende Vernetzung im Rahmen des Internet of Things (IoT) und der Einsatz von KI-Technologien eröffnen Cyberkriminellen dabei neue Angriffsvektoren, während gleichzeitig das Potenzial dieser Technologien für verbesserte Sicherheitsmaßnahmen erkannt wird \parencite{Radanliev2020}.
+
+Die Bedrohungslage wird zusätzlich durch die steigende Zahl von Angriffen auf Lieferketten verschärft. Eine Studie des Bundesamts für Sicherheit in der Informationstechnik (BSI) zeigt, dass 2023 fast jedes zweite Unternehmen in Deutschland von IT-Sicherheitsvorfällen betroffen war, wobei Angriffe über Drittanbieter und Zulieferer eine zunehmende Rolle spielten \parencite{BSI2023}. Besonders besorgniserregend ist dabei der Trend zu KI-gestützten Angriffen, die traditionelle Sicherheitsmaßnahmen umgehen können und eine neue Dimension der Bedrohung darstellen \parencite{Europol2024}.
+
+Um diesen Herausforderungen zu begegnen, müssen Unternehmen ihre Cybersicherheitsstrategien kontinuierlich anpassen und innovative Technologien nutzen. Der Trend geht dabei verstärkt in Richtung eines „Zero Trust“-Sicherheitsansatzes, bei dem nicht automatisch jedem Gerät innerhalb oder außerhalb des Netzwerks vertraut wird \parencite{Lallie2021}. Gleichzeitig gewinnen regulatorische Anforderungen wie die NIS2-Richtlinie der EU an Bedeutung und zwingen Unternehmen zu einer Priorisierung von Cybersicherheitsmaßnahmen und Datenschutz \parencite{EuropeanCommission2024}.
+
+Als Reaktion auf die verschärfte Bedrohungslage planen 45\% der Unternehmen, ihre Ausgaben für Cybersecurity um fünf bis zehn Prozent im Jahr 2024 zu erhöhen \parencite{Bitkom2024}. Dabei rücken insbesondere Investitionen in Vulnerability Management, proaktive Sicherheitsmaßnahmen und Mitarbeiterschulungen in den Fokus, um Schwachstellen frühzeitig zu erkennen und zu beheben sowie das Sicherheitsbewusstsein in der gesamten Organisation zu stärken.
+
+Diese Seminararbeit wird die aktuellen Bedrohungen für die Cybersicherheit von Unternehmen im Jahr 2024 näher beleuchten und effektive Schutzmaßnahmen diskutieren. Dabei werden sowohl technische als auch organisatorische Aspekte berücksichtigt, um ein ganzheitliches Verständnis der Herausforderungen und Lösungsansätze zu vermitteln. Ziel ist es, Entscheidungsträgern und IT-Verantwortlichen einen fundierten Überblick über die aktuelle Bedrohungslage zu geben und konkrete Handlungsempfehlungen für die Stärkung der Cybersicherheit in Unternehmen abzuleiten. Besonderes Augenmerk wird dabei auf die Rolle von KI sowohl als Bedrohung als auch als Schutzmaßnahme gelegt, sowie auf die Bedeutung von Resilienz und Incident Response in einer Zeit, in der Cyberangriffe nicht mehr die Frage des „Ob“, sondern des „Wann“ sind.
+
+% Literaturverzeichnis
+\newpage
+\begingroup
+\setstretch{1} % Line spacing within entries
+\setlength{\bibitemsep}{0.5\baselineskip} % Space between entries
+\addcontentsline{toc}{section}{Literaturverzeichnis} % Füge Literaturverzeichnis zum Inhaltsverzeichnis hinzu
+\printbibliography[title=Literaturverzeichnis]
+\endgroup
+
+\end{document}
