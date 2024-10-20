@@ -24,8 +24,8 @@
 \subsubsectionfont{\fontsize{12}{15}\selectfont\bfseries}
 \paragraphfont{\fontsize{12}{15}\selectfont\bfseries\itshape}
 
-% biblatex mit Harvard-Stil laden
-\usepackage[style=authoryear-comp]{biblatex}
+% biblatex mit Harvard-Stil laden und URLs erlauben
+\usepackage[style=authoryear-comp,url=true]{biblatex}
 \addbibresource{literature.bib}
 
 % Abbildungen und Tabellen beschriften
@@ -37,9 +37,6 @@
 
 % Paket für Grafiken
 \usepackage{graphicx}
-
-% Paket für URL-Darstellung
-\usepackage{url}
 
 % Paket für Anführungszeichen
 \usepackage[autostyle=true]{csquotes}
@@ -73,7 +70,6 @@
 
 % Inhaltsverzeichnis
 \tableofcontents
-\thispagestyle{empty}
 \newpage
 
 % Einleitung
